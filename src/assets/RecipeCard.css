@@ -1,0 +1,32 @@
+.recipe-card-container{
+    border: 5px solid black;
+    height: 500px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.recipe-title{
+    border: 2px solid black;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: 23px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.ingredients{
+    border: 2px solid black;
+    margin-top: 50px;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    margin-left: 23px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
