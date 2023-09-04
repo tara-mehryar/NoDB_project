@@ -1,11 +1,11 @@
 import "../assets/RecipeCard.css";
-import Ingredients from "./Ingredients"
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
     return (
         <div className="recipe-card-container">
-            <div className="recipe-title">Recipe Title</div>
-            <div className="ingredients"> <Ingredients /> </div>
+            <div className="recipe-title">{props.recipeTitle}</div>
+            <div className="ingredients">Ingredients:{props.ingredients}</div>
+            <div className="steps">Steps:{props.steps}</div>
         </div>
     )
 }

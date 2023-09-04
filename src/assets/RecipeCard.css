@@ -29,4 +29,17 @@
     margin-left: 23px;
     margin-top: 10px;
     border-radius: 10px;
+    overflow: scroll;
+}
+
+.steps{
+    border: 2px solid black;
+    margin-top: 50px;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    margin-left: 23px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: scroll;
 }
