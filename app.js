@@ -9,7 +9,6 @@ import { deleteRecipe } from './server/Controller.js'
 
 const app = express()
 const port = '8000'
-// const ctrl = require('./server/Controller')
 
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))

@@ -25,24 +25,36 @@ export function read(req, res) {
     res.status(200)
         .json(recipes);
 }
+// export function editRecipe(req, res) {
+//     const editId = req.params.id;
+//     const recipeEdit = recipes.forEach((el, i) => {
+//         if (el.id == editId) {
+//             return recipes[i].purchased = 'Yes';
+//         }
+//     });
+//     res.status(200)
+//         .json(recipes);
+// }
 export function editRecipe(req, res) {
-    const editId = req.params.id;
-    const recipeEdit = recipes.forEach((el, i) => {
-        if (el.id == editId) {
-            return recipes[i].purchased = 'Yes';
-        }
-    });
-    res.status(200)
-        .json(recipes);
-}
-export function deleteRecipe(req, res) {
 
-    const deleteId = req.params.id;
-    const recipeDelete = recipes.forEach((el, i) => {
-        if (el.id == deleteId) {
-            recipes.splice(i, 1);
-        }
-    });
-    res.status(200)
-        .json(recipes);
+}
+
+// export function deleteRecipe(req, res) {
+
+//     const deleteId = req.params.id;
+//     const recipeDelete = recipes.forEach((el, i) => {
+//         if (el.id == deleteId) {
+//             recipes.splice(i, 1);
+//         }
+//     });
+//     res.status(200)
+//         .json(recipes);
+// }
+
+export function deleteRecipe(req, res){
+    const { id } = req.params
+    const index = recipes.findIndex((recipe) => recipe.id === id);
+    recipes.splice(index, 1)
+    res.json(recipes)
+    console.log(recipes)
 }

@@ -20,12 +20,12 @@ function App() {
     };
   
     const editRecipe = (id) => {
-      axios.put("/api/editRecipe/${id}")
+      axios.put(`/api/editRecipe/${id}`)
         .then((response) => setRecipes(response.data));
     };
   
     const deleteRecipe = (id) => {
-      axios.delete("/api/deleteRecipe/${id}")
+      axios.delete(`/api/deleteRecipe/${id}`)
         .then((response) => setRecipes(response.data));
     };
   
