@@ -20,7 +20,7 @@ ViteExpress.config({ printViteDevServerHost: true })
 
 app.get('/api/allRecipes',read);
 app.post('/api/addRecipe',addRecipe);
-app.put('/api/editRecipe/:id',editRecipe);
+app.post('/api/editRecipe/:id',editRecipe);
 app.delete('/api/deleteRecipe/:id',deleteRecipe)
 
 

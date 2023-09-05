@@ -25,31 +25,23 @@ export function read(req, res) {
     res.status(200)
         .json(recipes);
 }
-// export function editRecipe(req, res) {
-//     const editId = req.params.id;
-//     const recipeEdit = recipes.forEach((el, i) => {
-//         if (el.id == editId) {
-//             return recipes[i].purchased = 'Yes';
-//         }
-//     });
-//     res.status(200)
-//         .json(recipes);
-// }
+
 export function editRecipe(req, res) {
+    let { id } = req.params
+    let { title, ingredients, steps } = req.body
+    
+    const index =  recipes.findIndex((recipe) => recipe.id === id)
+    
+    const recipe = recipes[index]
+
+    recipe.title = title ?? recipe.title
+    recipe.ingredients = ingredients ?? recipe.ingredients
+    recipe.steps = steps ?? recipe.steps
+
+    res.json(recipe)
 
 }
 
-// export function deleteRecipe(req, res) {
-
-//     const deleteId = req.params.id;
-//     const recipeDelete = recipes.forEach((el, i) => {
-//         if (el.id == deleteId) {
-//             recipes.splice(i, 1);
-//         }
-//     });
-//     res.status(200)
-//         .json(recipes);
-// }
 
 export function deleteRecipe(req, res){
     const { id } = req.params

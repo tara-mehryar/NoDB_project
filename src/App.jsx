@@ -20,7 +20,7 @@ function App() {
     };
   
     const editRecipe = (id) => {
-      axios.put(`/api/editRecipe/${id}`)
+      axios.post(`/api/editRecipe/${id}`)
         .then((response) => setRecipes(response.data));
     };
   
@@ -38,8 +38,8 @@ function App() {
       read();
     }, []);
   
-    const display = recipes.map((e, i) => (
-      <RecipesList key={e.id} recipe={e} deleteRecipe={deleteRecipe} editRecipe={editRecipe} />
+    const display = recipes.map((recipe) => (
+      <RecipesList key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe} editRecipe={editRecipe} />
     ));
   
     return (
